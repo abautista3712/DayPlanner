@@ -21,7 +21,8 @@ body {
 }
 
 #month {
-  width: 100%;
+  border-right: solid;
+  width: 50vw;
 }
 
 #day {

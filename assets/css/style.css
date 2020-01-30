@@ -1,3 +1,29 @@
 body {
   margin: 0px;
 }
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerSizing {
+  height: 50vh;
+  width: 100%;
+}
+
+#headerWrapper {
+  margin: 10% 15%;
+  border: solid;
+  height: auto;
+  width: auto;
+}
+
+#month {
+  width: 100%;
+}
+
+#day {
+  width: 100%;
+}

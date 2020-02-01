@@ -14,7 +14,8 @@ body {
 }
 
 #headerWrapper {
-  margin: 10% 15%;
+  flex-flow: row wrap;
+  margin: 5% 10%;
   border: solid;
   height: auto;
   width: auto;
@@ -22,9 +23,15 @@ body {
 
 #month {
   border-right: solid;
-  width: 50vw;
+  flex: 1.5 0 0;
 }
 
 #day {
+  flex: 2 0 0;
+}
+
+#time {
+  height: 10vh;
   width: 100%;
+  border: solid;
 }

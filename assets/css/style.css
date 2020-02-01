@@ -24,14 +24,17 @@ body {
 #month {
   border-right: solid;
   flex: 1.5 0 0;
+  font-family: "Bebas Neue", cursive;
 }
 
 #date {
   flex: 2 0 0;
+  font-family: "Bebas Neue", cursive;
 }
 
 #time {
   height: 10vh;
   width: 100%;
   border: solid;
+  font-family: "Bebas Neue", cursive;
 }

@@ -1,7 +1,8 @@
-console.log("Test");
+function update() {
+  $("#month").text(moment().format("MMM"));
+  $("#date").text(moment().format("DD"));
+  $("#time").text(moment().format("dddd, h:mm:ss a"));
+  setInterval(update, 1000);
+}
 
-$("#month").text(moment().format("MMM"));
-$("#date").text(moment().format("DD"));
-
-$("#time").text(moment().format("dddd, h:mm:ss a"));
-// console.log(moment().local());
+update();

@@ -21,6 +21,12 @@ body {
   width: auto;
 }
 
+#title {
+  width: 100%;
+  border-bottom: solid;
+  font-family: "Bebas Neue", cursive;
+}
+
 #month {
   border-right: solid;
   flex: 1.5 0 0;

@@ -9,7 +9,7 @@ body {
 }
 
 .headerSizing {
-  height: 50vh;
+  height: 30vh;
   width: 100%;
 }
 
@@ -26,7 +26,7 @@ body {
   flex: 1.5 0 0;
 }
 
-#day {
+#date {
   flex: 2 0 0;
 }
 

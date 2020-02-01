@@ -15,7 +15,7 @@ body {
 
 #headerWrapper {
   flex-flow: row wrap;
-  margin: 5% 10%;
+  margin: 1%;
   border: solid;
   height: auto;
   width: auto;

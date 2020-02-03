@@ -1,3 +1,5 @@
+var isClicked = false;
+
 // Function to update month/date/time
 function update() {
   $("#month").text(moment().format("MMM"));
@@ -63,5 +65,9 @@ for (j = 1; j < 6; j++) {
 }
 
 $(document).on("dblclick", ".userInput", function() {
-  $(this).text("Test");
+  $(this).empty();
+  var newInput = $("<input>");
+  newInput.css("width", "100%");
+  newInput.css("font-family", "Bebas Neue, cursive");
+  $(this).append(newInput);
 });

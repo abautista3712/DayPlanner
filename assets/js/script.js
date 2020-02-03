@@ -57,13 +57,16 @@ function contentRow(hour) {
   $("#contentWrapper").append(rowWrapper);
 }
 
+// Generates rows 9AM - 12PM
 for (i = 9; i < 13; i++) {
   contentRow(i);
 }
+// Generates rwos 1PM - 5PM
 for (j = 1; j < 6; j++) {
   contentRow(j);
 }
 
+// On double-click event for user input field
 $(document).on("dblclick", ".userInput", function() {
   $(this).empty();
   var newInput = $("<input>");

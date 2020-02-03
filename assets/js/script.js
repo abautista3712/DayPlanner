@@ -6,22 +6,40 @@ function update() {
 }
 update();
 
-var contentTime = $("<div>");
-contentTime.text("9AM");
-contentTime.css("flex-grow", "1");
-contentTime.css("border-right", "solid");
+function contentRow(hour) {
+  var rowWrapper = $("<div>");
+  rowWrapper.css("display", "flex");
+  rowWrapper.css("flex-flow", "row wrap");
+  rowWrapper.css("height", "10vh");
+  rowWrapper.css("width", "100%");
+  rowWrapper.css("border-bottom", "solid");
 
-var contentInput = $("<div>");
-contentInput.text("BLANK");
-contentInput.css("flex-grow", "8");
-contentInput.css("border-right", "solid");
+  var contentTime = $("<div>");
+  contentTime.text(hour + "AM");
+  contentTime.attr("class", "flexCenter");
+  contentTime.css("flex", "1 0 0");
+  contentTime.css("border-right", "solid");
 
-var contentSave = $("<div>");
-contentSave.text("SAVE");
-contentSave.css("flex-grow", "1");
+  var contentInput = $("<div>");
+  contentInput.text("BLANK");
+  contentInput.css("display", "flex");
+  contentInput.css("flex", "8 0 0");
+  contentInput.css("border-right", "solid");
 
-$("#contentWrapper").append(contentTime);
-$("#contentWrapper").append(contentInput);
-$("#contentWrapper").append(contentSave);
+  var contentSave = $("<div>");
+  contentSave.text("SAVE");
+  contentSave.attr("class", "flexCenter");
+  contentSave.css("flex", "1 0 0");
 
-for (i = 0; i < 9; i++) {}
+  $(rowWrapper).append(contentTime);
+  $(rowWrapper).append(contentInput);
+  $(rowWrapper).append(contentSave);
+  $("#contentWrapper").append(rowWrapper);
+}
+
+for (i = 9; i < 13; i++) {
+  contentRow(i);
+}
+for (j = 1; j < 6; j++) {
+  contentRow(j);
+}

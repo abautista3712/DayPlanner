@@ -46,6 +46,7 @@ body {
 }
 
 #contentWrapper {
+  flex-flow: row wrap;
   margin: 3% 5%;
   border: solid;
 }

@@ -44,3 +44,8 @@ body {
   border: solid;
   font-family: "Bebas Neue", cursive;
 }
+
+#contentWrapper {
+  margin: 3% 5%;
+  border: solid;
+}

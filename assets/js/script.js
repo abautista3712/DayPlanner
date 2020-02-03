@@ -34,6 +34,8 @@ function contentRow(hour) {
 
   //   User input element
   var contentInput = $("<div>");
+  contentInput.attr("id", hour + "row");
+  contentInput.attr("class", "userInput");
   contentInput.text("BLANK");
   contentInput.css("display", "flex");
   contentInput.css("flex", "8 0 0");
@@ -59,3 +61,7 @@ for (i = 9; i < 13; i++) {
 for (j = 1; j < 6; j++) {
   contentRow(j);
 }
+
+$(document).on("dblclick", ".userInput", function() {
+  $(this).text("Test");
+});

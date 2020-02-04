@@ -23,6 +23,7 @@ function contentRow(hour) {
 
   //   Time div element
   var contentTime = $("<div>");
+  contentTime.attr("class", "flexCenter");
   if (hour < 6) {
     contentTime.text(hour + " PM");
   } else if (hour < 12) {
@@ -30,24 +31,26 @@ function contentRow(hour) {
   } else if (hour === 12) {
     contentTime.text(hour + " PM");
   }
-  contentTime.attr("class", "flexCenter");
   contentTime.css("flex", "1 0 0");
   contentTime.css("border-right", "solid");
 
   //   User input element
-  var contentInput = $("<div>");
+  var contentInput = $("<input>");
   contentInput.attr("id", hour + "row");
   contentInput.attr("class", "userInput");
-  contentInput.text("BLANK");
+  contentInput.attr("placeholder", "Free Time");
   contentInput.css("display", "flex");
-  contentInput.css("flex", "8 0 0");
-  contentInput.css("border-right", "solid");
+  contentInput.css("flex", "5 0 0");
+  //   contentInput.css("border-right", "solid");
+  contentInput.css("font-family", "Bebas Neue, cursive");
 
   //   Save div element
   var contentSave = $("<div>");
-  contentSave.text("SAVE");
+  contentSave.attr("class", "userSave");
   contentSave.attr("class", "flexCenter");
+  contentSave.text("SAVE");
   contentSave.css("flex", "1 0 0");
+  contentSave.css("border-left", "solid");
 
   //   Appends elements to row wrapper
   $(rowWrapper).append(contentTime);
@@ -65,12 +68,3 @@ for (i = 9; i < 13; i++) {
 for (j = 1; j < 6; j++) {
   contentRow(j);
 }
-
-// On double-click event for user input field
-$(document).on("dblclick", ".userInput", function() {
-  $(this).empty();
-  var newInput = $("<input>");
-  newInput.css("width", "100%");
-  newInput.css("font-family", "Bebas Neue, cursive");
-  $(this).append(newInput);
-});

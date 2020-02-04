@@ -62,7 +62,7 @@ function contentRow(hour) {
 
 function saveOnClick(idVal) {
   $(document).on("click", "#" + idVal + "save", function() {
-    console.log($("#" + idVal + "input").val());
+    localStorage.setItem(idVal, $("#" + idVal + "input").val());
   });
 }
 
@@ -70,9 +70,11 @@ function saveOnClick(idVal) {
 for (i = 9; i < 13; i++) {
   contentRow(i);
   saveOnClick(i);
+  $("#" + i + "input").val(localStorage.getItem(i));
 }
 // Generates rwos 1PM - 5PM
 for (j = 1; j < 6; j++) {
   contentRow(j);
   saveOnClick(i);
+  $("#" + j + "input").val(localStorage.getItem(j));
 }

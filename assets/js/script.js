@@ -23,6 +23,7 @@ function contentRow(hour) {
 
   //   Time div element
   var contentTime = $("<div>");
+  contentTime.attr("id", hour);
   contentTime.attr("class", "flexCenter");
   if (hour < 6) {
     contentTime.text(hour + " PM");
@@ -33,6 +34,29 @@ function contentRow(hour) {
   }
   contentTime.css("flex", "1 0 0");
   contentTime.css("border-right", "solid");
+
+  //   Highlight past time in lightgrey
+
+  // Afternoon
+  if (moment().hour() > 12) {
+    if (hour < moment().hour() - 12) {
+      contentTime.css("background-color", "lightgrey");
+    }
+    if (hour > 8) {
+      contentTime.css("background-color", "lightgrey");
+    }
+  } else if (moment().hour() < 12) {
+    if (hour < moment().hour()) {
+      contentTime.css("background-color", "lightgrey");
+    }
+  }
+
+  //   Highlight current time in lightblue
+  if (hour === moment().hour()) {
+    contentTime.css("background-color", "lightblue");
+  } else if (hour === moment().hour() - 12) {
+    contentTime.css("background-color", "lightblue");
+  }
 
   //   User input element
   var contentInput = $("<input>");

@@ -36,7 +36,7 @@ function contentRow(hour) {
 
   //   User input element
   var contentInput = $("<input>");
-  contentInput.attr("id", hour + "row");
+  contentInput.attr("id", hour + "input");
   contentInput.attr("class", "userInput");
   contentInput.attr("placeholder", "Free Time");
   contentInput.css("display", "flex");
@@ -46,8 +46,8 @@ function contentRow(hour) {
 
   //   Save div element
   var contentSave = $("<div>");
-  contentSave.attr("class", "userSave");
-  contentSave.attr("class", "flexCenter");
+  contentSave.attr("id", hour + "save");
+  contentSave.attr("class", "userSave flexCenter");
   contentSave.text("SAVE");
   contentSave.css("flex", "1 0 0");
   contentSave.css("border-left", "solid");
@@ -68,3 +68,8 @@ for (i = 9; i < 13; i++) {
 for (j = 1; j < 6; j++) {
   contentRow(j);
 }
+
+$(document).on("click", ".userSave", function() {
+  console.log(this);
+  console.log($("#9row").val());
+});

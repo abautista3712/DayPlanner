@@ -90,15 +90,26 @@ function saveOnClick(idVal) {
   });
 }
 
+function colorOnClick(idVal) {
+  $(document).on("click", "#" + idVal + "save", function() {
+    $("#" + idVal + "save").css({
+      transition: "background-color 1s ease",
+      "background-color": "#aaf0d1"
+    });
+  });
+}
+
 // Generates rows 9AM - 12PM
 for (i = 9; i < 13; i++) {
   contentRow(i);
   saveOnClick(i);
+  colorOnClick(i);
   $("#" + i + "input").val(localStorage.getItem(i));
 }
 // Generates rwos 1PM - 5PM
 for (j = 1; j < 6; j++) {
   contentRow(j);
-  saveOnClick(i);
+  saveOnClick(j);
+  colorOnClick(j);
   $("#" + j + "input").val(localStorage.getItem(j));
 }

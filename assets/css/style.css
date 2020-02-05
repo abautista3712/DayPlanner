@@ -28,14 +28,18 @@ body {
 }
 
 #month {
-  border-right: solid;
   flex: 1.5 0 0;
+  opacity: 50%;
+  border-right: solid;
   font-family: "Bebas Neue", cursive;
+  font-size: 25vh;
 }
 
 #date {
   flex: 2 0 0;
+  opacity: 70%;
   font-family: "Bebas Neue", cursive;
+  font-size: 25vh;
 }
 
 #time {
@@ -43,6 +47,7 @@ body {
   width: 100%;
   border: solid;
   font-family: "Bebas Neue", cursive;
+  font-size: x-large;
 }
 
 #contentWrapper {

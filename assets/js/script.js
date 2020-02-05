@@ -1,5 +1,3 @@
-var isClicked = false;
-
 // Function to update month/date/time
 function update() {
   $("#month").text(moment().format("MMM"));
@@ -45,6 +43,7 @@ function contentRow(hour) {
     if (hour > 8) {
       contentTime.css("background-color", "lightgrey");
     }
+    // Morning
   } else if (moment().hour() < 12) {
     if (hour < moment().hour()) {
       contentTime.css("background-color", "lightgrey");
@@ -84,12 +83,14 @@ function contentRow(hour) {
   $("#contentWrapper").append(rowWrapper);
 }
 
+// User input data is saved to localStorage upon clicking save
 function saveOnClick(idVal) {
   $(document).on("click", "#" + idVal + "save", function() {
     localStorage.setItem(idVal, $("#" + idVal + "input").val());
   });
 }
 
+// Save buttons change color upon user click
 function colorOnClick(idVal) {
   $(document).on("click", "#" + idVal + "save", function() {
     $("#" + idVal + "save").css({
